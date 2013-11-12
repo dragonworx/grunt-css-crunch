@@ -14,7 +14,8 @@ module.exports = function(grunt) {
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask('css_crunch', 'Crunches, optimizes and resolves/copies assets of css files', function() {
-    //grunt.log.writeln(this.target);
+    var options = this.options({});
+	
     var css_crunch = require('css-crunch');
     css_crunch.build(this.data);
     // Merge task-specific and/or target-specific options with these defaults.
